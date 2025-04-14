@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forza 4</title>
+    <link rel="icon" type="image/png" href="chess-piece.png">
+
+    <link rel="stylesheet" href="stili.css">
+    <script src="script.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+        ✦
+    </div>
+    <div class="snowflake">
+        ⊹
+    </div>
+    <div class="snowflake">
+        ✦
+    </div>
+    <div class="snowflake">
+        ⊹
+    </div>
+    <div class="snowflake">
+        ✦
+    </div>
+    <div class="snowflake">
+        ⊹
+    </div>
+    <div class="snowflake">
+        ✦
+    </div>
+    <div class="snowflake">
+        ⊹
+    </div>
+    <div class="snowflake">
+        ✦
+    </div>
+  </div>
+  
+    <h1> ✦ Forza 4 ✦ </h1> <!--chiusura h1 titolo pagina-->
+    <div id ="board">
+
+       
+        
+
+    </div> <!--chiusura board-->
+
+    <button onclick="window.location.reload();" id="btn">Gioca Ancora</button>
+</body>
+</html>
+
+<!-- ragionamento 
+
+Righe = array di 7 elementi ( r = [7] )
+Colonne = array di 6 elementi ( c = [6] )
+la tavola di gioco è un array di array ( board = [][])
+bisogna assegnare una coordinata a ciascun 'posto'. Per esempio, il primo 'posto' sarà "0 , 0"
+Cosa fare? Quando l'utente clicca su un 'posto' bisogna recuperare le coordinate di quel posto
+A questo punto, abbiamo bisogno di un array di supporto che raccoglie gli 'indici disponibili' ( available = [5,5,5,5,5,5,5] )
+Quando l'utente clicca su una coordinata, bisogna aggiornare la sua posizione nell'array con un -1 ( available = [5,5,4,5,5,5,5] )
+-->
