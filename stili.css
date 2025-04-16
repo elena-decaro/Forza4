@@ -1,0 +1,234 @@
+body {
+    /* background-color: #7e7e7e; */
+    /* background-image: url("https://img.freepik.com/free-vector/natural-evening-landscape-with-green-hills_126523-20.jpg?semt=ais_hybrid&w=740"); */
+    /* background-image: url("https://img2.wallspic.com/previews/5/0/9/2/5/152905/152905-landscape-art-world-animation-illustration-x750.jpg"); */
+    /* background-image: url("https://i.postimg.cc/N096hhWM/bgpic2.png"); */
+    background-image: url("https://images3.alphacoders.com/126/thumb-1920-1269904.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    /* font-family: "Pixelify Sans", sans-serif; */
+    font-family: "Winky Rough";
+    font-size: 50px;
+    letter-spacing: 0.7px;
+    color: #e4e4e4;
+    /* text-shadow: 2px 2px 30px #000; */
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
+
+}
+
+/* .container{
+    display: flex;
+    justify-content: center;
+}
+    */
+
+#board{
+    height: 540px;
+    width: 630px;
+    /* height: 100vh; <- questo significa "viewport height"
+    width: 100vw; <- questo significa "viewport width" */
+    padding: 10px;
+    margin: 0 auto;
+
+    background-color: rgba(91,91,240);
+    border: 8px solid rgba(20,20,114);
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    z-index: 1;
+}
+
+.tile{
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    cursor: pointer;
+    
+    border-radius: 50%;
+    background-color: transparent;
+    border: 4px solid rgb(13, 13, 77);
+}
+
+.tile:hover{
+    background-color: rgba(20, 20, 92, 0.575);
+}
+
+.red-piece{
+    background-color: rgb(146, 36, 36);
+}
+
+.yellow-piece{
+    background-color: rgb(226, 196, 26);
+    
+}
+
+.red-piece, .yellow-piece{
+    position: relative; /*posiziono il gettone relativamente al div padre, che è board*/
+    top: -535px;
+    animation: drop 0.5s ease forwards;
+}
+
+@keyframes drop{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(540px);
+    }
+}
+
+
+/*------------------------------------------------------*/
+
+
+/* NEVE */
+.snowflake {
+    color: #fff;
+    font-size: 2em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+  }
+
+@-webkit-keyframes snowflakes-fall{
+    0%{
+        top:-10%
+    }
+    100%{
+        top:100%
+    }
+}
+@-webkit-keyframes snowflakes-shake{
+    0%{
+        -webkit-transform:translateX(0px);
+        transform:translateX(0px)
+    }
+    50%{
+        -webkit-transform:translateX(80px);
+        transform:translateX(80px)
+    }
+    100%{
+        -webkit-transform:translateX(0px);
+        transform:translateX(0px)
+    }
+}
+@keyframes snowflakes-fall{
+    0%{
+        top:-10%
+    }
+    100%{
+        top:100%
+    }
+}
+@keyframes snowflakes-shake{
+    0%{
+        transform:translateX(0px)
+    }
+    50%{
+        transform:translateX(80px)
+    }
+    100%{
+        transform:translateX(0px)
+    }
+}
+.snowflake{
+    position:fixed;
+    top:-10%;
+    z-index:-1;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;cursor:default;
+    -webkit-animation-name:snowflakes-fall,snowflakes-shake;
+    -webkit-animation-duration:10s,3s;
+    -webkit-animation-timing-function:linear,ease-in-out;
+    -webkit-animation-iteration-count:infinite,infinite;
+    -webkit-animation-play-state:running,running;
+    animation-name:snowflakes-fall,snowflakes-shake;
+    animation-duration:10s,3s;
+    animation-timing-function:linear,ease-in-out;
+    animation-iteration-count:infinite,infinite;
+    animation-play-state:running,running
+}
+
+.snowflake:nth-of-type(0){
+    left:1%;-webkit-animation-delay:0s,0s;
+    animation-delay:0s,0s
+}
+.snowflake:nth-of-type(1){
+    left:10%;
+    -webkit-animation-delay:1s,1s;
+    animation-delay:1s,1s
+}
+.snowflake:nth-of-type(2){
+    left:20%;
+    -webkit-animation-delay:6s,.5s;
+    animation-delay:6s,.5s
+}
+.snowflake:nth-of-type(3){
+    left:30%;
+    -webkit-animation-delay:4s,2s;
+    animation-delay:4s,2s
+}
+.snowflake:nth-of-type(4){
+    left:40%;
+    -webkit-animation-delay:2s,2s;
+    animation-delay:2s,2s
+}
+.snowflake:nth-of-type(5){
+    left:50%;
+    -webkit-animation-delay:8s,3s;
+    animation-delay:8s,3s
+}.snowflake:nth-of-type(6){
+    left:60%;
+    -webkit-animation-delay:6s,2s;
+    animation-delay:6s,2s
+}
+.snowflake:nth-of-type(7){
+    left:70%;
+    -webkit-animation-delay:2.5s,1s;
+    animation-delay:2.5s,1s
+}
+.snowflake:nth-of-type(8){
+    left:80%;
+    -webkit-animation-delay:1s,0s;
+    animation-delay:1s,0s
+}
+.snowflake:nth-of-type(9){
+    left:90%;
+    -webkit-animation-delay:3s,1.5s;
+    animation-delay:3s,1.5s
+}
+
+#btn{
+    width: 200px;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: rgba(91,91,240);
+    font-family: "Winky Rough";
+    font-size: 20px;
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+/* btn::after{
+    background-color: 
+    rgba(91,91,240);
+} */
